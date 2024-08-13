@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaFire } from "react-icons/fa";
 
 export const Container = tw.div`
     flex
@@ -43,7 +43,7 @@ export const SubTitle = tw.h6`
     dark:text-gray-400
 `;
 
-export const Note = tw.h6`
+export const Text = tw.h6`
     mr-2
     text-md
     font-regular
@@ -52,8 +52,29 @@ export const Note = tw.h6`
     dark:text-white
 `;
 
-export const Icon = tw(FaStar)`
+export const IconStar = tw(FaStar)`
     text-yellow-900
+    text-md
+    mr-2
+`;
+
+export const ContainerIconFire = tw.div`
+    flex
+    items-center
+    justify-center
+    bg-gray-400
+    bg-opacity-50
+    p-2 
+    mb-4
+    min-w-36
+    max-w-56
+    rounded-md
+    hover:bg-opacity-70
+    transition-opacity
+`;
+
+export const IconFire = tw(FaFire)`
+    text-white
     text-md
     mr-2
 `;
