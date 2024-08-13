@@ -1,13 +1,17 @@
-import { Container, Text } from "./style";
+import { Container, Icon, Text } from "./style";
 
-type ButtonProps ={
+type ButtonProps = {
     text: string;
+    showIcon?: boolean;
 }
 
-export function Button({text}: ButtonProps) {
+export function Button({ text, showIcon }: ButtonProps) {
     return (
         <Container>
             <Text>{text}</Text>
+            {showIcon &&
+                <Icon />
+            }
         </Container>
     );
 }

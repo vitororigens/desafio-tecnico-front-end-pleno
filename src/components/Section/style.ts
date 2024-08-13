@@ -1,6 +1,7 @@
 import tw from "tailwind-styled-components";
 
 export const Container = tw.div`
+    p-2
     flex
     flex-row
     dark:bg-gray-700
