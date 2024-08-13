@@ -24,3 +24,9 @@ export const Divider = tw.div`
     text-gray-900 
     dark:bg-white
 `;
+
+export const Content = tw.div`
+    flex
+    flex-col
+    w-1/4
+`;

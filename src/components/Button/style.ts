@@ -17,7 +17,7 @@ export const Container = tw.button`
 
 export const Text = tw.span`
     text-white
-    text-md
+    text-sm
 `;
 
 export const Icon = tw(FaPlay)`
