@@ -6,14 +6,14 @@ type CardProps = {
     title?: string;
 }
 
-export function Card({note, title}: CardProps) {
+export function Card({ note, title }: CardProps) {
     return (
         <Container>
             <div className="flex flex-row">
                 <ContainerIcon>
                     <IconStar />
                     <SubTitle>
-                        {note}7.3
+                        {note}
                     </SubTitle>
                 </ContainerIcon>
                 <ContainerIcon>
@@ -22,7 +22,7 @@ export function Card({note, title}: CardProps) {
             </div>
             <div>
                 <Title>
-                    {title} Divertidamente 2
+                    {title}
                 </Title>
                 <Button text="Assistir ao trailer" showIcon />
             </div>

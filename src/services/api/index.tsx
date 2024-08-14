@@ -1,10 +1,47 @@
 import axios from 'axios';
 
-const API_KEY = 'fea450a149a3b99beb8f768b60c48605';
-const BASE_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}`;
+const API_KEY = '6fc9400';
+const BASE_URL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
-export const fetchMovies = async (searchTerm: string) => {
-  const response = await axios.get(`${BASE_URL}&query=${searchTerm}`);
-  return response.data.results; 
+export interface FetchMoviesParams {
+  year?: string;
+  type?: string;
+  searchTerm?: string; 
+  moviePropts?: string;
+}
 
+export const fetchMovies = async ({ year, type, searchTerm, moviePropts }: FetchMoviesParams) => {
+  try {
+    let url = `${BASE_URL}&s=movie`;
+    if (moviePropts) {
+      url = `https://www.omdbapi.com/?i=${encodeURIComponent(moviePropts)}&apikey=${API_KEY}`;
+    }
+    if (searchTerm) {
+      url = `${BASE_URL}&s=${encodeURIComponent(searchTerm)}`;
+    }
+    if (year) {
+      url += `&y=${encodeURIComponent(year)}`;
+    }
+    if (type) {
+      url += `&type=${encodeURIComponent(type)}`;
+    }
+
+    console.log('Request URL:', url); 
+    const response = await axios.get(url);
+
+    console.log('API Response:', response.data);
+
+    if (response.data.Response === 'False') {
+      throw new Error(response.data.Error);
+    }
+
+    if (response.data.Search) {
+      return response.data.Search;
+    } else {
+      return [response.data]; 
+    }
+  } catch (error) {
+    console.error('Error fetching movies:', error);
+    return [];
+  }
 };

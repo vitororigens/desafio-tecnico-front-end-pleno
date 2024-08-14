@@ -9,6 +9,7 @@ export const Container = tw.div`
     h-[200px]
     p-2
     bg-white 
+    mb-2
     border 
     border-gray-200 
     rounded-lg 

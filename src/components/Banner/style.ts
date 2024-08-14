@@ -5,7 +5,7 @@ export const Container = tw.div`
     flex
     flex-col
     w-3/4
-    h-[600px]
+    h-[662px]
     p-8
     justify-end
     bg-white 
