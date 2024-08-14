@@ -5,7 +5,6 @@ export const Container = tw.div`
     flex
     flex-col
     justify-between
-  max-w-[400px]
     h-[200px]
     p-2
     bg-white 

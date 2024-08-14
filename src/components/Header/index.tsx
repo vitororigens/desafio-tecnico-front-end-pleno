@@ -6,6 +6,7 @@ import { Search } from "../Search";
 import { BannerSearch, Container, Title } from "./style";
 import { useSearchMovies } from "@/hooks/useSearchMovies";
 import { Card } from "../Card";
+import { Filter } from "../Filter";
 
 export function Header() {
     const [showBannerSearch, setShowBannerSearch] = useState(false);
@@ -15,20 +16,23 @@ export function Header() {
     useEffect(() => {
         if (query) {
             fetchMoviesSearch(query);
-            setShowBannerSearch(true); 
+            setShowBannerSearch(true);
         } else {
-            setShowBannerSearch(false); 
+            setShowBannerSearch(false);
         }
     }, [query, fetchMoviesSearch]);
 
     return (
         <Container>
             <Title>Rater</Title>
-            <Search
-                value={query}
-                onChange={setQuery}
-                onSearch={() => setQuery(query)} 
-            />
+            <div className="flex">
+                <Search
+                    value={query}
+                    onChange={setQuery}
+                    onSearch={() => setQuery(query)}
+                />
+                <Filter />
+            </div>
             <Button text="Login" />
             {showBannerSearch && (
                 <BannerSearch>

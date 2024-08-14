@@ -19,13 +19,15 @@ export const Title = tw.text`
 
 export const BannerSearch = tw.div`
    absolute
-   mt-[900px]
-   h-[600px]
+   flex
+   gap-2
+   top-0
+   mt-[90px]
    left-0
    w-full
    bg-gray-700
    z-50
-   max-h-96
+   h-full
    overflow-auto
    border
    border-gray-700
