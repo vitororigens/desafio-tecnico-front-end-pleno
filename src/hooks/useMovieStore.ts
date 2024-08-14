@@ -8,6 +8,7 @@ export interface Movies {
   Year: string;
   Plot: string;
   Genre: string;
+  Poster: string;
 }
 
 interface MovieStore {

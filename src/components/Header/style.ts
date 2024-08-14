@@ -16,3 +16,17 @@ export const Title = tw.text`
     font-bold 
     m-0
 `;
+
+export const BannerSearch = tw.div`
+   absolute
+   mt-[900px]
+   h-[600px]
+   left-0
+   w-full
+   bg-gray-700
+   z-50
+   max-h-96
+   overflow-auto
+   border
+   border-gray-700
+`;

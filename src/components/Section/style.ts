@@ -5,6 +5,7 @@ export const Container = tw.div`
     flex
     flex-row
     dark:bg-gray-700
+    justify-between
 `;
 
 export const Title = tw.h5`

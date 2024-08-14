@@ -7,6 +7,7 @@ export const Container = tw.div`
     w-3/4
     h-[662px]
     p-8
+    mr-4
     justify-end
     bg-white 
     border 
@@ -40,7 +41,7 @@ export const SubTitle = tw.h6`
     font-regular
     tracking-tight 
     text-gray-900 
-    dark:text-gray-400
+    dark:text-white
 `;
 
 export const Text = tw.h6`

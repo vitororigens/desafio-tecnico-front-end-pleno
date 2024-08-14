@@ -35,13 +35,9 @@ export const fetchMovies = async ({ year, type, searchTerm, moviePropts }: Fetch
       throw new Error(response.data.Error);
     }
 
-    if (response.data.Search) {
-      return response.data.Search;
-    } else {
-      return [response.data]; 
-    }
+    return response.data.Search || [response.data];
   } catch (error) {
     console.error('Error fetching movies:', error);
-    return [];
+    return []; 
   }
 };

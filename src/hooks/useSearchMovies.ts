@@ -1,7 +1,7 @@
 import { fetchMovies } from '@/services/api';
 import { create } from 'zustand';
 
-export interface Movie {
+interface Movie {
   Title: string;
   Year: string;
   Rated: string;
@@ -42,7 +42,7 @@ export const useSearchMovies = create<MovieState>((set) => ({
   fetchMoviesSearch: async (searchTerm: string) => {
     try {
       const response = await fetchMovies({ searchTerm });
-      set({ movies: response.Search || [] }); 
+      set({ movies: response });
     } catch (error) {
       console.error('Error fetching movies:', error);
       set({ movies: [] });

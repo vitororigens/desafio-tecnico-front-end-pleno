@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Banner } from '../Banner';
 import { Card } from '../Card';
 import { Container, Content, Divider, Title } from './style';
@@ -39,6 +39,7 @@ export function Section() {
           year={movie[0].Year}
           description={movie[0].Plot}
           category={movie[0].Genre}
+          background={movie[0].Poster}
         />
       ) : (
         <Banner
@@ -54,8 +55,8 @@ export function Section() {
         {movies.slice(1, 4).map((movie) => (
           <Card
             key={movie.imdbID}
-            note={movie.imdbRating}
             title={movie.Title}
+            background={movie.Poster}
           />
         ))}
       </Content>

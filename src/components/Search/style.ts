@@ -17,7 +17,7 @@ export const SearchInput = tw.input`
     focus:outline-none
 `;
 
-export const ContainerIcon = tw.div`
+export const ContainerIcon = tw.button`
     bg-gray-700
     p-2
     rounded-full
@@ -30,3 +30,5 @@ export const Icon = tw(FaSearch)`
     text-white
     text-md
 `;
+
+

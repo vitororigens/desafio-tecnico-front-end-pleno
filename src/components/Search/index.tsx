@@ -1,12 +1,23 @@
 import { Container, SearchInput, ContainerIcon, Icon } from "./style";
 
-export function Search() {
+type SearchProps = {
+    value: string;
+    onChange: (value: string) => void;
+    onSearch: () => void;
+}
+
+export function Search({ value, onChange, onSearch }: SearchProps) {
     return (
         <Container>
-            <ContainerIcon>
+            <SearchInput
+                type="text"
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                placeholder="Pesquisar..."
+            />
+            <ContainerIcon onClick={onSearch}>
                 <Icon />
             </ContainerIcon>
-            <SearchInput placeholder="Pesquisar..." />
         </Container>
     );
 }
