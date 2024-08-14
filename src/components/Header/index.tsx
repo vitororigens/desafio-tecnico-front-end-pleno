@@ -31,7 +31,7 @@ export function Header() {
                     onChange={setQuery}
                     onSearch={() => setQuery(query)}
                 />
-                <Filter />
+                <Filter category="" />
             </div>
             <Button text="Login" />
             {showBannerSearch && (

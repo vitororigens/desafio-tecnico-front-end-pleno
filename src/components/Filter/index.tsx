@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { BannerFilter, Button, Container, Icon, Text } from "./style";
+import { useMoviePropts } from "@/hooks/useMoviePropts";
 
 export function Filter() {
+    const { categories } = useMoviePropts();
     const [showBannerFilter, setShowBannerFilter] = useState(false);
 
     const handleToggleBannerFilter = () => {
@@ -13,15 +15,15 @@ export function Filter() {
             <Container onClick={handleToggleBannerFilter}>
                 <Icon />
             </Container>
-            {showBannerFilter &&
-                <BannerFilter >
-                    <Button>
-                        <Text>
-                            Ação
-                        </Text>
-                    </Button>
+            {showBannerFilter && (
+                <BannerFilter>
+                    {categories.map((category) => (
+                        <Button key={category}>
+                            <Text>{category}</Text>
+                        </Button>
+                    ))}
                 </BannerFilter>
-            }
+            )}
         </>
     );
 }
