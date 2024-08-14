@@ -7,7 +7,7 @@ export const Container = tw.div`
     bg-gray-800
     p-2 
     rounded-[40px]
-    w-96
+    max-w-96
 `;
 
 export const SearchInput = tw.input`

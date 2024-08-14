@@ -6,7 +6,7 @@ type CardProps = {
     background?: string;
 }
 
-export function Card({ note, title, background }: CardProps) {
+export function Card({ title, background }: CardProps) {
     return (
         <Container style={{
             backgroundImage: `url(${background})`,
@@ -21,7 +21,7 @@ export function Card({ note, title, background }: CardProps) {
                 <Title>
                     {title}
                 </Title>
-                <Button text="Assistir ao trailer" showIcon />
+                <Button text="Assistir ao trailer" showIconPlay />
             </div>
         </Container>
     )

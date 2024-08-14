@@ -4,7 +4,8 @@ import { FaStar, FaFire } from "react-icons/fa";
 export const Container = tw.div`
     flex
     flex-col
-    w-3/4
+    w-full
+    md:w-3/4
     h-[662px]
     p-8
     mr-4

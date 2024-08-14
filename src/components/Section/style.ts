@@ -3,7 +3,8 @@ import tw from "tailwind-styled-components";
 export const Container = tw.div`
     p-2
     flex
-    flex-row
+    flex-col
+    md:flex-row
     dark:bg-gray-700
     justify-between
 `;
@@ -29,5 +30,8 @@ export const Divider = tw.div`
 export const Content = tw.div`
     flex
     flex-col
-    w-1/4
+    w-full
+    md:w-1/4
+    mt-4
+    md:mt-0
 `;

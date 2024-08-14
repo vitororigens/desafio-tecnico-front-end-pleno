@@ -33,7 +33,7 @@ export function Banner({ category, description, hour, note, title, year, backgro
       <Content>
         <SubTitle>{description}</SubTitle>
       </Content>
-      <Button text="Assistir ao trailer" showIcon />
+      <Button text="Assistir ao trailer" showIconPlay />
     </Container>
   );
 }

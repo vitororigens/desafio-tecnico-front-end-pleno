@@ -1,12 +1,13 @@
 import tw from "tailwind-styled-components";
 import { FaPlay } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
 
 export const Container = tw.button`
     flex
     items-center
     justify-center
     bg-gray-400
-    bg-opacity-50
+    bg-opacity-70
     p-2 
     min-w-36
     max-w-56
@@ -20,8 +21,15 @@ export const Text = tw.span`
     text-sm
 `;
 
-export const Icon = tw(FaPlay)`
-    text-gray-400
+export const IconPlay = tw(FaPlay)`
+    text-white
     text-md
     ml-2
 `;
+
+export const IconMenu = tw(FiMenu)`
+    text-white
+    text-md
+    ml-2
+`;
+

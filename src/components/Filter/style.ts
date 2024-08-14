@@ -24,7 +24,8 @@ export const BannerFilter = tw.div`
    justify-center
    gap-2
    top-0
-   mt-[90px]
+   mt-[70px]
+   md:mt-[90px]
    left-0
    w-full
    bg-gray-700

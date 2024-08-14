@@ -22,13 +22,32 @@ export const BannerSearch = tw.div`
    flex
    gap-2
    top-0
-   mt-[90px]
+   mt-[150px]
+   md:mt-[90px]
    left-0
    w-full
    bg-gray-700
    z-50
    h-full
    overflow-auto
+   border
+   border-gray-700
+`;
+
+export const MenuMobile = tw.div`
+   absolute
+   flex
+   flex-col
+   gap-2
+   top-0
+   mt-[70px]
+   left-0
+   w-full
+   bg-gray-700
+   z-50
+   h-full
+   overflow-auto
+   items-center
    border
    border-gray-700
 `;

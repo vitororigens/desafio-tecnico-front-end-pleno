@@ -1,16 +1,21 @@
-import { Container, Icon, Text } from "./style";
+import { Container, IconMenu, IconPlay, Text } from "./style";
 
 type ButtonProps = {
-    text: string;
-    showIcon?: boolean;
+    text?: string;
+    showIconPlay?: boolean;
+    showIconMenu?: boolean;
+    onClick?: () => void;
 }
 
-export function Button({ text, showIcon }: ButtonProps) {
+export function Button({ text, showIconPlay, showIconMenu, onClick }: ButtonProps) {
     return (
-        <Container>
+        <Container onClick={onClick}>
             <Text>{text}</Text>
-            {showIcon &&
-                <Icon />
+            {showIconPlay &&
+                <IconPlay />
+            }
+            {showIconMenu &&
+                <IconMenu />
             }
         </Container>
     );
